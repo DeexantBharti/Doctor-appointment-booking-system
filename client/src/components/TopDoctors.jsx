@@ -1,13 +1,13 @@
-import React from 'react';
-import { doctors } from '../assets/assets.js';
-import { useNavigate } from 'react-router-dom';
+import React, {useContext} from 'react';
 
+import { useNavigate } from 'react-router-dom';
+import { AppContext } from '../context/AppContext.jsx';
 export default function TopDoctors() {
 
 const navigate = useNavigate();
 
 
-
+const {doctors} = useContext(AppContext);
 
 
   return (
@@ -19,7 +19,7 @@ const navigate = useNavigate();
 
       <div className="w-full grid gap-4 pt-5 gap-y-6 px-3 sm:px-0 
                       grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {doctors.slice(0, 10).map((item, index) => (
+        {doctors.slice(0, 12).map((item, index) => (
           <div onClick={() => navigate(`/appointment/${item._id}`)}
             className="border border-blue-200 rounded-xl overflow-hidden cursor-pointer 
                        hover:translate-y-[-10px] transform duration-500"
@@ -40,7 +40,7 @@ const navigate = useNavigate();
       </div>
 
       <div className="mt-6">
-        <button className="bg-blue-500 text-white px-12 py-3 rounded-full mt-10">More</button>
+        <button onClick={() => {navigate('/doctors'); scrollTo(0,0)}} className="bg-blue-500 text-white px-12 py-3 rounded-full mt-10 cursor-pointer">More</button>
       </div>
     </div>
   );
