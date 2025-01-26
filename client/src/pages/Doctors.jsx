@@ -47,7 +47,7 @@ const {doctors} = useContext(AppContext)
           <p onClick={() => speciality === 'gastroenterologist' ? navigate('/doctors') : navigate('/doctors/gastroenterologist')} className={`w-[94vw] sm:w-auto pl-3 py-1.5 pr-16 border border-gray-300 rounded transition-all cursor-pointer `}>Gastroenterologist</p>
         </div>
         <div className="w-full grid gap-4 pt-5 gap-y-6 px-3 sm:px-0 
-                      grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+                      grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {
       filterDoc.map((item, index) => (
         <div onClick={() => navigate(`/appointment/${item._id}`)}
