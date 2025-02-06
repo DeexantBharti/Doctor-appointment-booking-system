@@ -12,7 +12,7 @@ createRoot(document.getElementById('root')).render(
   <AdminContextProvider>
     <DoctorContextProvider>
       <AppContextProvider>
-          <App />
+          <App /> 
       </AppContextProvider>
     </DoctorContextProvider>
   </AdminContextProvider>
