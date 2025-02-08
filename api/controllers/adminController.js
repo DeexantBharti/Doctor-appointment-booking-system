@@ -6,13 +6,13 @@ import jwt from 'jsonwebtoken'
 
 const addDoctor = async (req, res) => {
     try {
-    //   console.log(req.body); // Logs the form-data fields
+      console.log(req.body); // Logs the form-data fields
     //   console.log(req.file); // Logs the uploaded file
-      const { name, email, password, speciality, degree, experience, about, fee, address } = req.body;
+      const { name, email, password, speciality, degree, experience, about, fees, address } = req.body;
       const imageFile = req.file;
       
       // checking for all data to add doctor
-      if(!name || !email || !password || !speciality || !degree || !experience || !about || !fee || !address){
+      if(!name || !email || !password || !speciality || !degree || !experience || !about || !fees || !address){
         return res.json({success:false,message:"Missing details"})
       }
        
@@ -43,11 +43,11 @@ const addDoctor = async (req, res) => {
       degree,
       experience,
       about,
-      fee,
+      fees,
       address:JSON.parse(address),
       date:Date.now(),
     }
-
+    console.log("Fees" + fees)
     const newDoctor = new doctorModel(doctorData)
     await newDoctor.save()
 
