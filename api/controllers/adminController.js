@@ -82,4 +82,17 @@ const loginAdmin = async (req, res) => {
   }
 }
   
-export {addDoctor ,loginAdmin}
+// api to reatin the doctors data
+
+const allDoctors = async(req, res ) => {
+try {
+  const doctors = await doctorModel.find({}).select('-password') // for excluding the password in response
+  res.json({success:true,doctors})
+} catch (error) {
+  console.log(error)
+  res.json({success:false,message:error.message})
+}
+}
+
+
+export {addDoctor ,loginAdmin, allDoctors}
