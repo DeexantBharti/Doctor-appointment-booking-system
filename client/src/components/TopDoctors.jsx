@@ -8,7 +8,7 @@ const navigate = useNavigate();
 
 
 const {doctors} = useContext(AppContext);
-
+console.log(doctors);
 
   return (
     <div className="flex flex-col items-center gap-4 my-16 text-gray-900 md:mx-10">
@@ -19,7 +19,7 @@ const {doctors} = useContext(AppContext);
 
       <div className="w-full grid gap-4 pt-5 gap-y-6 px-3 sm:px-0 
                       grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {doctors.slice(0, 12).map((item, index) => (
+        {doctors.slice(0, 10).map((item, index) => (
           <div onClick={() => {navigate(`/appointment/${item._id}`); scrollTo(0,0)}}
             className="border border-blue-200 rounded-xl overflow-hidden cursor-pointer 
                        hover:translate-y-[-10px] transform duration-500"
