@@ -6,7 +6,8 @@ import { DoctorContext } from '../context/DoctorContext.jsx'
 
 export default function Navbar() {
 const {aToken,setAToken} = useContext(AdminContext)
-const {dToken, setDToken} = useContext(DoctorContext)
+const {dToken,setDToken} = useContext(DoctorContext)
+
 
 const navigate = useNavigate()
 
