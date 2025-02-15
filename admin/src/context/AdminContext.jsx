@@ -15,8 +15,7 @@ const AdminContextProvider = (props) => {
 
 
 
-// const backendUrl = import.meta.env.VITE_BACKEND_URL 
-const backendUrl = "https://doceasy-backend-97sj.onrender.com"
+const backendUrl = import.meta.env.VITE_BACKEND_URL 
 
   const getAllDoctors = async () => {
     try {

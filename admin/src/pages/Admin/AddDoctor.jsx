@@ -63,7 +63,7 @@ try {
         setAddress1('')
         setAddress2('')
         setDegree('')
-        setFees('')
+        setFees('') 
         setAbout('')
 
     }

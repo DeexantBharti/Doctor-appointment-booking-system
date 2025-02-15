@@ -10,7 +10,7 @@ import { assets } from '../../assets/assets'
 
 export default function AllAppointments() {
 
-  const {aToken,appointments,getAllAppointments,cancelAppointment} = useContext(AdminContext)
+  const {aToken,appointments, getAllAppointments,cancelAppointment} = useContext(AdminContext)
   const {calculateAge, slotDateFormat,currency}  = useContext(AppContext)
 
   useEffect(() => {
