@@ -8,7 +8,7 @@ import Sidebar from './components/Sidebar.jsx';
 import {Route,Routes} from 'react-router-dom'
 import Dashboard from './pages/Admin/Dashboard.jsx';
 import AllAppointments from './pages/Admin/AllAppointments.jsx';
-import AddDoctor from './pages/admin/AddDoctor.jsx';
+import AddDoctor from './pages/Admin/AddDoctor.jsx';
 import DoctorsList from './pages/Admin/DoctorsList.jsx';
 import { DoctorContext } from './context/DoctorContext.jsx';
 import DoctorDashboard from './pages/Doctor/DoctorDashboard.jsx';
