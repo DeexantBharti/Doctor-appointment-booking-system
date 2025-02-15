@@ -1,4 +1,4 @@
-import React, { useState,useNavigate } from 'react'
+import React, { useState } from 'react'
 import {assets} from '../assets/assets.js'
 import { AdminContext } from '../context/AdminContext.jsx'
 import { useContext } from 'react'
@@ -12,7 +12,6 @@ export default function login() {
   const [state,setState] = useState('Admin')
 const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')
-const navigate = useNavigate()
 
   const {setAToken,backendUrl} = useContext(AdminContext)
   const {setDToken} = useContext(DoctorContext)
@@ -26,7 +25,6 @@ event.preventDefault()
       localStorage.setItem('aToken',data.token)
         // console.log(data.token);
         setAToken(data.token)
-        navigate('/admin-dashboard')
       }
       else{
         toast.error(data.message);
