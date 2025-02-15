@@ -66,7 +66,7 @@ const updateUserProfileData = async () => {
    }
   <hr className='bg-zinc-400 h-[1px] border-none' />
   <div>
-    <p className='text-neutral-50 underline mt-3'>Contact Information</p>
+    <p className='text-neutral-500 underline mt-3'>Contact Information</p>
     <div className='grid grid-cols-[1fr_3fr] gap-y-2.5 mt-3 text-neutral-700'>
       <p className='font-medium'>Email id:</p>
       <p className='text-blue-500'>{userData.email} </p>
@@ -94,7 +94,7 @@ const updateUserProfileData = async () => {
     </div>
   </div>
   <div>
-    <p className='text-netural-500 underline mt-3'>Basic Information</p>
+    <p className='text-neutral-500 underline mt-3'>Basic Information</p>
     <div className='grid grid-cols-[1fr_3fr] gap-y-2.5 mt-3 text-neutral-700'>
       <p className='font-medium'>Gender: </p>
       {

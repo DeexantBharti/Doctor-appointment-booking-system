@@ -19,10 +19,6 @@ aToken && setAToken('')
 aToken && localStorage.removeItem('aToken')
 }
 
-
-
-
-
   return (
     <div className='flex justify-between items-center px-4 sm:px-10 py-3 border-b bg-white'>
         <div className='flex items-center text-xs gap-2 '>
