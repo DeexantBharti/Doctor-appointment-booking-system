@@ -17,8 +17,9 @@ console.log(doctors);
         Simply browse through our extensive list of trusted doctors
       </p>
 
-      <div className="w-full grid gap-4 pt-5 gap-y-6 px-3 sm:px-0 
+      <div className="w-full sm:w-[80%] md:w-[70%] lg:w-full grid gap-4 pt-5 gap-y-6 px-3 sm:px-0 
                       grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+
         {doctors.slice(0, 10).map((item, index) => (
           <div onClick={() => {navigate(`/appointment/${item._id}`); scrollTo(0,0)}}
             className="border border-blue-200 rounded-xl overflow-hidden cursor-pointer 
