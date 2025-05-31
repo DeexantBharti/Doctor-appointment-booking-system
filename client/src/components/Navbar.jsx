@@ -13,7 +13,7 @@ export default function Navbar() {
    useEffect(() => {
     setShowDropdown(false);
   }, [userData]);
-  
+
   const logOut = () => {
     setToken('');
     localStorage.removeItem('token');
