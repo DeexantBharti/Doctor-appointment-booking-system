@@ -6,6 +6,7 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import OAuth from '../components/OAuth'
 
 export default function Login() {
   const navigate = useNavigate()
@@ -40,7 +41,7 @@ const onSubmitHandler = async (event) => {
         setToken(data.token)
 
       }
-      else{
+      else{ 
         toast.error(data.message)
       }
     }
@@ -78,14 +79,17 @@ useEffect(()=> {
         <p>Password</p>
         <input className='border border-zinc-300 rounded w-full p-2 mt-1' type="password" onChange={(e)=> setPassword(e.target.value)} value={password} />
       </div>
-      <button type='submit' className='bg-blue-600 text-white w-full py-2 rounded-md text-base'>{state ==='Sign Up' ?"Create Account" : "Login"} </button>
+      <button type='submit' className='bg-blue-600 text-white w-full py-2 rounded-md text-base uppercase'>{state ==='Sign Up' ?"Create Account" : "Login"} </button>
+      <OAuth/>
       {
         state ==='Sign Up'
         ? <p>Already have an account ? <span onClick={() => setState('Login')} className='text-blue-600 underline cursor-pointer'> Login here</span> </p>
         :
         <p>Create a new account? <span onClick={() => setState('Sign Up')} className='text-blue-600 underline cursor-pointer'>Click here </span></p>
       }
+      
     </div>
+    
     </form>
   )
 }

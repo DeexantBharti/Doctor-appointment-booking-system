@@ -6,7 +6,7 @@ import {v2 as cloudinary}  from 'cloudinary'
 import doctorModel from '../models/doctorModel.js'
 import appointmentModel from '../models/appointmentModel.js'
 import razorpay from 'razorpay'
-
+import defaultImage from './basicUrl.js'
 
 // api to resgister user
 const registerUser = async(req,res) => {
@@ -68,6 +68,44 @@ const loginUser = async (req, res) => {
         res.json({success:false,message:error.message})
     }
 }
+
+const OAuth = async(req,res) => {
+    try {
+        const { name , email , googleId,photoURL    } = req.body
+        if(!name || !email || !googleId ){
+            return res.status(400).json({
+                success:false,
+                message:"All fields are required ( name ,email , googleID"
+            });
+
+        }
+        let user = await userModel.findOne({
+                $or: [{email},{googleId}]
+        });
+        if(!user){
+            user = await userModel.create({
+                name,
+                email,
+                googleId,
+                image:photoURL,
+                password: 'google-auth'// dummy passwowrd for schema validation
+            });
+        }
+        else if(user.image === defaultImage){
+                user.image = photoURL;
+                await user.save();
+        }
+        const token = jwt.sign({id:user._id},process.env.JWT_SECRET);
+        res.status(200).json({
+            success:true,
+            token,
+            message: "Google authentication successful"
+        });
+    } catch (error) {
+        console.error("Google oAuth Error",error);
+    }
+}
+
 
 
 // api to get user profile data
@@ -254,4 +292,5 @@ const verifyRazorpay = async(req, res) => {
     }
 }
 
-export {registerUser,  loginUser, getProfile, updateProfile, bookAppointment, listAppointment, cancelAppointment,paymentRazorpay,verifyRazorpay}
+
+export {registerUser,  loginUser, getProfile, updateProfile, bookAppointment, listAppointment, cancelAppointment,paymentRazorpay,verifyRazorpay,OAuth}

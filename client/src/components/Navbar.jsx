@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { assets } from '../assets/assets.js';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
@@ -10,6 +10,10 @@ export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
 
+   useEffect(() => {
+    setShowDropdown(false);
+  }, [userData]);
+  
   const logOut = () => {
     setToken('');
     localStorage.removeItem('token');
