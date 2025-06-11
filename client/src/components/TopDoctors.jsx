@@ -2,14 +2,31 @@ import React, {useContext} from 'react';
 
 import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../context/AppContext.jsx';
+import { useState } from 'react';
+import { useEffect } from 'react';
 export default function TopDoctors() {
 
 const navigate = useNavigate();
 
 
 const {doctors} = useContext(AppContext);
-console.log(doctors);
+// console.log(doctors);
 
+const [loading,setLoadig] = useState(true);
+
+useEffect(()=>{
+   if(doctors && doctors.length > 0){
+    setLoadig(false);
+   }
+},[doctors]);
+if(loading){
+  return(
+    <div className="flex flex-col items-center gap-4 my-16 text-gray-900 md:mx-10">
+      <h1 className= "text-3xl font-medium">Top Doctors to Book</h1>
+      <p className="text-lg text-blue-500 mt-10" >Doctor cards are loading...</p>
+    </div>
+  );
+}
   return (
     <div className="flex flex-col items-center gap-4 my-16 text-gray-900 md:mx-10">
       <h1 className="text-3xl font-medium">Top Doctors to Book</h1>
