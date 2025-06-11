@@ -6,7 +6,7 @@ DocEasy is a full-stack web application that allows patients to book appointment
 
 ## 🌐 Live Demo
 
-[🔗 Visit DocEasy Live](https://doceasy-site.onrender.com/) *(optional)*
+[🔗 Visit DocEasy Live](https://doceasy-site.onrender.com/) 
 
 ---
 
