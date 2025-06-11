@@ -10,13 +10,13 @@ const navigate = useNavigate();
 
 
 const {doctors} = useContext(AppContext);
-// console.log(doctors);
+console.log(doctors);
 
-const [loading,setLoadig] = useState(true);
+const [loading,setLoading] = useState(true);
 
 useEffect(()=>{
    if(doctors && doctors.length > 0){
-    setLoadig(false);
+    setLoading(false);
    }
 },[doctors]);
 if(loading){
