@@ -31,6 +31,5 @@ app.get('/',(req,res) => {
 res.send("Api Working")
 })
 
-module.exports = app;
 
 app.listen(port, () =>console.log("Server Started", port))
