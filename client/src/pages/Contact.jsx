@@ -13,7 +13,7 @@ export default function Contact() {
                 <p className='font-semibold text-lg text-gray-600'>Our Office</p>
                 <p className='text-gray-500'>54709 willms station <br />suite 350, washington USA.</p>
                 <p className='text-gray-500'>Tel: (415) 555-0132 <br /> Email: bhartideexant1234@gmail.com</p>
-                <p className='font-semibold text-lg text-gray-600'>Carrears at Prescripto</p>
+                <p className='font-semibold text-lg text-gray-600'>Carrears at DocEasy</p>
                 <p className='text-gray-500'>Learns more about teams and job openings</p>
                 <button className='border border-black px-8 py-4 text-sm hover:bg-black hover:text-white translate-all duration-500 cursor-pointer'>Explore Jobs</button>
             </div>

@@ -23,7 +23,7 @@ const {doctors} = useContext(AppContext)
 
   const applyFilter = () => {
     if(speciality){
-      setFilterDoc(doctors.filter(doc => doc.speciality === speciality))
+      setFilterDoc(doctors.filter(doc => doc.speciality.toLowerCase() === speciality.toLowerCase()))
     }
     else{
       setFilterDoc(doctors)

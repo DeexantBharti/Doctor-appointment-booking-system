@@ -13,7 +13,7 @@ export default function Footer() {
               {/* left section */}
               <div>
         <img className='mb-5 w-40 ' src={assets.logo} alt="" />
-        <p className='w-full md:w-2/3 text-gray-600 leading-6 '>Prescripto is a seamless and efficient doctor appointment booking app that connects patients with healthcare professionals. Easily schedule consultations, access medical profiles, and receive timely reminders—all in one convenient platform.</p>
+        <p className='w-full md:w-2/3 text-gray-600 leading-6 '>DocEasy is an intuitive and reliable doctor appointment management system that simplifies healthcare access for patients and doctors alike. Effortlessly book appointments, manage schedules, and view patient histories—all from a unified, user-friendly platform designed for smarter medical care.</p>
               </div>
               {/* center section */}
               <div className=' '>
@@ -37,7 +37,7 @@ export default function Footer() {
         <div>
             {/* copyright text */}
             <hr />
-            <p className='py-5 text-sm text-center'>Copyright 2025@ HealthTap - All Right Reserved</p>
+            <p className='py-5 text-sm text-center'>Copyright 2025@ DocEasy - All Right Reserved</p>
         </div>
     </div>
   )
