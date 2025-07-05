@@ -41,6 +41,6 @@ const { data } = await axios.post(`${backendUrl}/api/user/google`, {
 
     return (
        
-        <button type='button' onClick = {handleGoogleClick} className='bg-pink-700 text-white w-full py-2 rounded-md text-base hover:opacity-95 uppercase'>continue with google    </button>
+        <button type='button' onClick = {handleGoogleClick} className='bg-pink-700 text-white w-full py-2 hover:cursor-pointer rounded-md text-base hover:opacity-95 uppercase'>continue with google    </button>
     );
 }
