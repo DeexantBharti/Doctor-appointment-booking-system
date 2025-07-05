@@ -58,7 +58,7 @@ if(loading){
       </div>
 
       <div className="mt-6">
-        <button onClick={() => {navigate('/doctors'); scrollTo(0,0)}} className="bg-blue-500 text-white px-12 py-3 rounded-full mt-10 cursor-pointer">More</button>
+        <button onClick={() => {navigate('/doctors'); scrollTo(0,0)}} className="custom-bg text-white px-12 py-3 rounded-full mt-10 cursor-pointer">More</button>
       </div>
     </div>
   );

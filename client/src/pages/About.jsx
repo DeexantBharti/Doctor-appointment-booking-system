@@ -21,15 +21,15 @@ export default function About() {
       <p>WHY <span className='text-gray-700 font-semibold'>CHOOSE US </span></p>
     </div>
     <div className='flex flex-col md:flex-row mb-20'>
-    <div className='border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-blue-600 hover:text-white transition-all duration-300 text-gray-600 cursor-pointer'>
+    <div className='border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:hover:bg-[#7a33ff] hover:text-white transition-all duration-300 text-gray-600 cursor-pointer'>
       <b>Efficeincy</b>
       <p>Streamline appointment bookings, reduce wait times, and manage consultations effortlessly with real-time scheduling and smart automation.</p>
     </div>
-    <div className='border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-blue-600 hover:text-white transition-all duration-300 text-gray-600 cursor-pointer'>
+    <div className='border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-[#7a33ff] hover:text-white transition-all duration-300 text-gray-600 cursor-pointer'>
     <b>Convenience</b>
     <p>Book, manage, and review appointments anytime, anywhere. Access all healthcare services through one easy-to-use platform.</p>
     </div>
-    <div className='border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-blue-600 hover:text-white transition-all duration-300 text-gray-600 cursor-pointer'>
+    <div className='border px-10 md:px-16 py-8 sm:py-16 flex flex-col gap-5 text-[15px] hover:bg-[#7a33ff] hover:text-white transition-all duration-300 text-gray-600 cursor-pointer'>
     <b>Personalization</b>
     <p>Receive tailored appointment reminders, doctor suggestions, and health updates based on your medical history and preferences.</p>
     </div>

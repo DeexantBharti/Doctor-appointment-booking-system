@@ -20,3 +20,11 @@ body{
     @apply text-white bg-blue-600
   }
 }
+
+/* styles.css */
+.custom-bg {
+  @apply bg-[#7a33ff] text-white;
+}
+.text-primary {
+  @apply text-[#7a33ff];
+}

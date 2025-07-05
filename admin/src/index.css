@@ -10,3 +10,10 @@
 *{
     font-family:'Inter','Outfit';
 }
+
+.custom-bg {
+  @apply bg-[#7a33ff] text-white;
+}
+.text-primary {
+  @apply text-[#7a33ff];
+}

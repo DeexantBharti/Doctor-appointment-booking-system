@@ -25,7 +25,7 @@ aToken && localStorage.removeItem('aToken')
             <img className='w-36 sm:w-40 cursor-pointer' src={assets.admin_logo} alt="" />
             <p className='border px-2.5 py-0.5 rounded-full border-gray-500 text-gray-600'>{aToken ? 'Admin' : 'Doctor'} </p>
         </div>
-            <button onClick={logout} className='bg-blue-600 text-white text-sm px-10 py-2 rounded-full cursor-pointer'>Logout</button>
+            <button onClick={logout} className='custom-bg text-white text-sm px-10 py-2 rounded-full cursor-pointer'>Logout</button>
     </div>
   )
 }

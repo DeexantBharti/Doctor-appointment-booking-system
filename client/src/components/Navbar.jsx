@@ -26,19 +26,19 @@ export default function Navbar() {
       <ul className='hidden md:flex ml-8 items-start gap-5 font-medium'>
         <NavLink to='/'>
           <li className='py-1'>HOME</li>
-          <hr className='border-none outline-none h-0.5 bg-blue-500 w-3/5 hidden' />
+          <hr className='border-none outline-none h-0.5 custom-bg w-3/5 hidden' />
         </NavLink>
         <NavLink to='/doctors'>
           <li className='py-1'>ALL DOCTORS</li>
-          <hr className='border-none outline-none h-0.5 bg-blue-500 w-3/5 hidden' />
+          <hr className='border-none outline-none h-0.5 custom-bg w-3/5 hidden' />
         </NavLink>
         <NavLink to='/about'>
           <li className='py-1'>ABOUT</li>
-          <hr className='border-none outline-none h-0.5 bg-blue-500 w-3/5 hidden' />
+          <hr className='border-none outline-none h-0.5 custom-bg w-3/5 hidden' />
         </NavLink>
         <NavLink to='/contact'>
           <li className='py-1'>CONTACT</li>
-          <hr className='border-none outline-none h-0.5 bg-blue-500 w-3/5 hidden' />
+          <hr className='border-none outline-none h-0.5 custom-bg w-3/5 hidden' />
         </NavLink>
         <a
           href="https://doceasy-panel.onrender.com"
@@ -55,7 +55,7 @@ export default function Navbar() {
           <div className='relative flex items-center gap-2 cursor-pointer group'
                onMouseEnter={() => setShowDropdown(true)}
                onMouseLeave={() => setShowDropdown(false)}>
-            <div className='w-14 h-14 rounded-full border-2 border-blue-600 flex items-center justify-center'>
+            <div className='w-14 h-14 rounded-full border-2 custom-bg flex items-center justify-center'>
               <img className='w-12 rounded-full' src={userData.image} alt="Profile" />
             </div>
             <div className={`absolute top-0 right-0 pt-14 text-base font-medium text-gray-600 z-50 ${showDropdown ? 'block' : 'hidden'}`}>
@@ -67,7 +67,7 @@ export default function Navbar() {
             </div>
           </div>
         ) : (
-          <button onClick={() => navigate('/login')} className='text-white ml-4 mr-9 px-6 py-2 sm:px-6 sm:py-3 rounded-full font-light text-xs bg-blue-600 cursor-pointer'>
+          <button onClick={() => navigate('/login')} className='text-white ml-4 mr-9 px-6 py-2 sm:px-6 sm:py-3 rounded-full font-light text-xs custom-bg cursor-pointer'>
             Sign In
           </button>
         )}
