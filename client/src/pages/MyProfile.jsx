@@ -82,7 +82,7 @@ const updateUserProfileData = async () => {
     ? <p>
       <input className='bg-gray-50' onChange={(e) => setUserData(prev => ({...prev,address: {...prev.address, line1:e.target.value}}))} value={userData.address.line1} type="text" />
       <br />
-      <input className='bg-gray-50' onChange={(e) => setUserData(prev => ({...prev,address: {...prev.address, line1:e.target.value}}))} value={userData.address.line2}  type='text' />
+      <input className='bg-gray-50' onChange={(e) => setUserData(prev => ({...prev,address: {...prev.address, line2:e.target.value}}))} value={userData.address.line2}  type='text' />
     </p>
     : <p className='text-gray-500'>
       {

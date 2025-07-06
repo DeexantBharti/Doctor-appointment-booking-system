@@ -166,7 +166,10 @@ try {
                         <textarea onChange={(e) => setAbout(e.target.value)} value={about} className='w-full px-4 pt-2 border rounded'    placeholder='Write About Doctor' rows={5} required />
                     </div>
 
-                    <button type='submit'  className='bg-blue-600 px-10 py-3 mt-4 text-white rounded-full cursor-pointer'>Add Doctor</button>
+        <button type='submit' className='bg-blue-600 px-10 py-3 mt-4 text-white rounded-full cursor-pointer'>Add Doctor</button>
+        <p className="text-red-600 mt-4 font-semibold text-sm  mb-4">
+  🔒 You cannot add doctor in demo mode for safety purposes.
+</p>
         </div>
         
      </form>

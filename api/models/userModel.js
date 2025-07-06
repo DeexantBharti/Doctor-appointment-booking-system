@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
  address:{type:Object,default:{line1:'',line2:''}},
  gender:{type:String,default:"Not Selected"},
  dob:{type:String,default:"Not Selected"},
- phone:{type:String,default:"000000000"},
+ phone:{type:String,default:"1234567890"},
  googleId:{type:String,unique:true,sparse:true}
 
 },{minimize:false})
