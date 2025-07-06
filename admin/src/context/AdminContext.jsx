@@ -32,7 +32,9 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL
     }
   }
 
-   const changeAvailability = async (docId) =>{
+  const changeAvailability = async (docId) => {
+    toast('You can not change the availability in view mode only', { duration: 2000 });
+    return;
      
      try {
         const {data} = await axios.post(backendUrl+'/api/admin/change-availability',{docId},{headers:{aToken}})
@@ -68,7 +70,8 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL
    }
 
    const cancelAppointment  = async (appointmentId) => {
-      
+     toast('You can not cancel the appointment in view mode only', { duration: 2000 });
+     return;
     try {
       const {data} = await axios.post(backendUrl + '/api/admin/cancel-appointment',{appointmentId},{headers:{aToken}})
       if(data.success){

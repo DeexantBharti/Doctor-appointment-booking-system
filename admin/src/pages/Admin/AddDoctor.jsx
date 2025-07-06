@@ -21,13 +21,13 @@ export default function AddDoctor() {
    
    const {backendUrl,aToken} = useContext(AdminContext)
 
-   console.log('ddf')
-   const onSubmitHandler = async (event) => {
-event.preventDefault();
-
-// console.log("this is onsubmit handler function");
-
-
+  const onSubmitHandler = async (event) => {
+     
+    event.preventDefault();
+    console.log('before toast');
+    toast('You can not add doctor in view mode only', { duration: 2000 });
+    return;
+    console.log('after toast');
 try {
     if(!docImg){
         return toast.error('Image not Selected')

@@ -18,6 +18,9 @@ export default function Login() { // Note: Capitalize component names!
   const navigate = useNavigate();
 
   const onSubmitHandler = async (event) => {
+    toast(`Authenticating your ${state} Login`, {
+  duration: 3000, // 3000 ms = 3 seconds
+});
     event.preventDefault();
     try {
       if (state === 'Admin') {
