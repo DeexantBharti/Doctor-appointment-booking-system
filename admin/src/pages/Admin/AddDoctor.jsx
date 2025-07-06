@@ -25,7 +25,7 @@ export default function AddDoctor() {
      
     event.preventDefault();
     console.log('before toast');
-    toast('You can not add doctor in view mode only', { duration: 2000 });
+    toast('🔒 View Mode Enabled — Actions are disabled for safety & demo purposes.', { duration: 2000 });
     return;
     console.log('after toast');
 try {

@@ -12,10 +12,10 @@ export default function Login() {
   const navigate = useNavigate()
 
   const {backendUrl,token,setToken} = useContext(AppContext)
-const [state,setState] = useState('Sign Up')
+const [state,setState] = useState('Login')
 
-const [email, setEmail] = useState('')
-const [password,setPassword] = useState('')
+const [email, setEmail] = useState('temporary@gmail.com')
+const [password,setPassword] = useState('DoceasyPassword@1')
 const [name,setName] = useState('')
 
 
@@ -57,6 +57,16 @@ useEffect(()=> {
  }
 },[token])
 
+  useEffect(() => {
+    if (state == 'Sign Up') {
+      setEmail('');
+      setPassword('');
+    }
+    else {
+      setEmail('temporary@gmail.com');
+      setPassword("DoceasyPassword@1")
+    }
+  },[state])
 
   return (
     <form onSubmit={onSubmitHandler} className='min-h-[80vh] flex items-center'>
