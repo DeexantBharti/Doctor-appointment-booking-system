@@ -7,8 +7,8 @@ export default function About() {
       <div className='text-center text-2xl pt-10 text-gray-500'>
         <p>ABOUT <span className='text-gray-700 font-medium'>US</span></p>
       </div>
-      <div className='my-10 flex flex-col md:flex-row gap-12 '>
-        <img className='w-full md:max-w-[360px]' src={assets.about_image} alt="" />
+      <div className='my-10 flex justify-around md:flex-row gap-12 '>
+        {/* <img className='w-full md:max-w-[360px]' src={assets.about_image} alt="" /> */}
     
       <div className='flex flex-col justify-center gap-6 w-2/4 text-sm text-gray-600'>
         <p>DocEasy is a smart, user-friendly platform designed to streamline the process of booking medical appointments. Whether you are a patient seeking expert care or a doctor managing consultations, DocEasy ensures a seamless experience with real-time scheduling, digital patient records, and secure communication tools.</p>

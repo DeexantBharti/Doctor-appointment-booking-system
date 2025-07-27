@@ -55,7 +55,8 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL
     try {
       const {data} = await axios.get(backendUrl + '/api/admin/appointments', {headers:{aToken}})
       console.log(data)
-      if(data.success){
+      if (data.success) {
+        data.appointments.reverse();
         setAppointments(data.appointments)
         console.log(data.appointments)
       }

@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 export const DoctorContext = createContext();
 
 const DoctorContextProvider = (props) => {
+  
   const backendUrl = import.meta.env.VITE_BACKEND_URL 
 
   const [dToken, setDToken] = useState(localStorage.getItem('dToken') ?localStorage.getItem('dToken'):'')
@@ -27,7 +28,10 @@ const DoctorContextProvider = (props) => {
     }
   }
   const completeAppointment = async (appointmentId) => {
-     try {
+    toast('🔒 View Mode Enabled — Actions are disabled for safety & demo purposes.', { duration: 2000 });
+        return;
+    try {
+       
        
         const {data} = await axios.post(backendUrl + '/api/doctor/complete-appointment',{appointmentId},{headers:{dToken}})
         if(data.success){
@@ -44,6 +48,8 @@ const DoctorContextProvider = (props) => {
      }
   }
   const cancelAppointment = async (appointmentId) => {
+    toast('🔒 View Mode Enabled — Actions are disabled for safety & demo purposes.', { duration: 2000 });
+        return;
     try {
 
        const {data} = await axios.post(backendUrl + '/api/doctor/cancel-appointment',{appointmentId},{headers:{dToken}})

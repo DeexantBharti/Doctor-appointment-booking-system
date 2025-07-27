@@ -48,8 +48,8 @@ export default function Login() { // Note: Capitalize component names!
   };
   useEffect(() => {
     if (state != 'Admin') {
-      setPassword('');
-      setEmail('');
+      setPassword('KartikPatel@12');
+      setEmail('KartikPatel@gmail.com');
     }
     else {
       setEmail("admin@doceasy.com");
