@@ -24,6 +24,7 @@ export default function Appointment() {
     const docInfo = doctors.find(doc => doc._id === docId)
     setDocInfo(docInfo)
   }
+
   const getAvailableSlots = async () => {
     const slots = [];
 setDocSlots([])
@@ -42,7 +43,7 @@ setDocSlots([])
       } else {
         currentDate.setHours(10);
         currentDate.setMinutes(0);
-      }
+      } 
   
       let timeSlots = [];
       while (currentDate < endTime) {

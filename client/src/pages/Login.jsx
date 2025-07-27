@@ -90,7 +90,7 @@ useEffect(()=> {
         <input className='border border-zinc-300 rounded w-full p-2 mt-1' type="password" onChange={(e)=> setPassword(e.target.value)} value={password} />
       </div>
       <button type='submit' className='custom-bg text-white hover:cursor-pointer w-full py-2 rounded-md text-base uppercase'>{state ==='Sign Up' ?"Create Account" : "Login"} </button>
-      <OAuth/>
+      {/* <OAuth/> */}
       {
         state ==='Sign Up'
         ? <p>Already have an account ? <span onClick={() => setState('Login')} className='text-[#7a33ff] underline cursor-pointer'> Login here</span> </p>
