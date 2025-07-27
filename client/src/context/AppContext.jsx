@@ -20,7 +20,8 @@ const AppContextProvider = (props) => {
     const getDoctorsData = async () => {
         try {
             const {data} = await axios.get(backendUrl + '/api/doctor/list')
-            if(data.success){
+          if (data.success) {
+            data.doctors.reverse();
         setDoctors(data.doctors)
         console.log(doctors)
             }

@@ -20,7 +20,8 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL
   const getAllDoctors = async () => {
     try {
         const {data} = await axios.post(backendUrl+ '/api/admin/all-doctors', {}, {headers:{aToken}})
-        if(data.success){
+      if (data.success) {
+        data.doctors.reverse();
             setDoctors(data.doctors)
           console.log(data.doctors)
         }   

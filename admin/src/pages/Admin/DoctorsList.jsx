@@ -16,8 +16,9 @@ export default function DoctorsList() {
    <div className='flex flex-wrap w-full gap-4 pt-5 gap-y-6 ' >
     {
       doctors.map((item, index ) => (
-    <div className='border border-indigo-200 rounded-xl mx-w-56 overflow-hidden cursor-pointer group-[5]:' key={index}>
-       <img className='bg-indigo-50 custom-bg transition-all duration-500' src={item.image} alt="" />
+    <div className='w-56 border border-indigo-200 rounded-xl overflow-hidden cursor-pointer' key={index}>
+
+       <img  className='w-full h-55 object-cover bg-indigo-50 transition-all duration-500' src={item.image} alt="" /> 
        <div className='p-4'>
         <p className='text-neutral-800 text-lg font-medium ' >{item.name} </p>
         <p className='text-zinc-600 text-sm'>{item.speciality} </p>
